@@ -8,6 +8,7 @@ import { PremierLeagueTable } from "./PremierLeagueTable";
 import { ChampionsLeagueTable } from "./ChampionsLeagueTable";
 import { Sample } from "./Sample";
 import { UpComing } from "./UpComing";
+import { ChampLeagueTopScorer } from "./ChampLeagueTopScorer";
 
 class footyApp extends React.Component {
   state = {
@@ -30,6 +31,18 @@ class footyApp extends React.Component {
     const topScorerUrl = FootyConstants.TOP_SCORER_URL;
     const mufcDataUrl = FootyConstants.MUFC_DATA_URL;
     const liveGameUrl = FootyConstants.LIVE_GAME_URL;
+    const champTopScorer = FootyConstants.CHAMP_LEAGUE_TOP_SCORER;
+
+    await fetch(champTopScorer, {
+      method: "GET",
+      headers: {
+        "X-Auth-Token": API_KEY,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("data", data)
+      });
 
     await fetch(liveGameUrl, {
       method: "GET",
@@ -80,6 +93,14 @@ class footyApp extends React.Component {
   }
 
   render() {
+    const getTopScorer = () => {
+      if(this.state.liveGameChamp){
+        return <ChampLeagueTopScorer></ChampLeagueTopScorer>
+      }else{
+        return <TopScorer></TopScorer>
+      }
+    }
+    
     return (
       <div className="App">
         <div className="container">
@@ -97,7 +118,7 @@ class footyApp extends React.Component {
               <div class="loader"></div>
             </div>
           ) : (
-            <TopScorer></TopScorer>
+            getTopScorer()
           )}
 
           <PrevGames></PrevGames>
