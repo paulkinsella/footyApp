@@ -8,7 +8,8 @@ export const FootyConstants = {
      NEXT_MATCH:   `https://api.football-data.org/v2/teams/66/matches?status=SCHEDULED`,
      MUFC: `Manchester United FC`,
      CHAMP:` Champions League`,
-     CHAMP_LEAGUE_TABLE: `https://api.football-data.org/v2/competitions/CL/standings`
+     CHAMP_LEAGUE_TABLE: `https://api.football-data.org/v2/competitions/CL/standings`,
+     CHAMP_LEAGUE_TOP_SCORER: `https://api.football-data.org/v2/competitions/CL/scorers`
 }
 
 export default FootyConstants
