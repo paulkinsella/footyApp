@@ -1,0 +1,424 @@
+.App {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 20px;;
+  overflow-y: scroll;
+  text-align: center;
+  width: 100%;
+  
+}
+
+.formGuide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: floatText 15s infinite linear;
+  padding-left: 100%; /*Initial offset*/
+  padding-bottom: 20px;
+}
+
+
+.sitemessage:hover {
+  animation-play-state: paused;
+}
+@keyframes floatText {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.league-logo {
+  height: 250px;
+  width: 250px;
+}
+
+.App-logo {
+padding-top: 20px;
+height: 150px;
+width: 150px;
+}
+
+.App-logo2 {
+  padding-top: 20px;
+  height: 125px;
+  width: 125px;
+  }
+
+  .App-logo3 {
+    align-items: left;
+    height: 45px;
+    width: 45px;
+    }
+
+.relegationZone {
+  width:33%;
+  background-color: lightcoral;
+}
+
+.mufcPos {
+  border: 2.5px solid rgb(218 41 28);
+}
+
+.champsLeague {
+  width:33%;
+  color: white;
+  background-color: rgba(105, 44, 193)
+}
+
+/* .champsLeague:hover:after {
+  content: url(images/champ.jpg); 
+  height: 50px;
+  display: block;
+  background-color: white;
+}
+
+.europaLeague:hover:after {
+  content: url(images/europa.png); 
+  display: block;
+  background-color: white;
+} */
+
+
+.europaLeague {
+  width:33%;
+  color: white;
+  background-color:  rgba(241, 136, 7);
+}
+
+.tableCrest {
+  margin-left: 2px;
+  height: 50px;
+  width: 50px;
+}
+
+.customColumn {
+  width: 33%;
+}
+
+.customColumnTwo {
+  width:10%;
+}
+
+.leagueTable {
+  border: solid 1px
+}
+
+.sample {
+  border: solid 1px 
+}
+.customRow {
+  border-style: solid 1px;
+  border-color: black;
+}
+
+.customColumnpos {
+  width:20%;
+}
+
+.customColumnTeam {
+  width: auto;
+  text-align: center;
+  border: solid 1px black
+}
+
+.crest {
+  height: 25px;
+  width: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.matchDay {
+  font-size: 10px;
+}
+
+.live {
+  background-color: lightGreen;
+  font-weight: bold;
+}
+
+.compName {
+  font-size: 14px;
+}
+
+.noLiveGame {
+  background-color: rgb(218 41 28);
+  font-weight: bold;
+}
+
+
+.tableBody {
+  margin-top: 60px;
+}
+
+.complete {
+  background-color: lightcoral;
+}
+
+.newCardContainer{
+  width:100%;
+  height: 500px;
+}
+
+.card-container {
+  height: 100%;
+  margin: auto;
+  overflow-x: none;
+  display: flex;
+  background-color: tableBody;
+  padding: 3rem;
+  padding-bottom: 20px;
+}
+
+.card {
+  min-width: 300px;
+  height: 350px;
+  border-radius: 16px;
+  background-color: rgb(218 41 28);
+  box-shadow: -1rem 0 1rem #000;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: 0.2s;
+}
+
+.date {
+  color: #8a8a8a;
+}
+
+.tags {
+  color:white;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0 1rem;
+}
+
+.formGuide {
+  position: relative;
+  top: 0;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.tags div {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+}
+
+.card .category-title {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.card .article-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card .article-header {
+  margin-bottom: auto;
+}
+
+.card .author {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+}
+
+.info {
+  font-size: 150px;
+  color: white;
+}
+
+.profile {
+  width: 50%;
+}
+
+.caption {
+  font-size: 150px;
+  color: white;
+}
+
+.author {
+  font-size: 150px;
+  color: white;
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+
+table {
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  height: 50px;
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  color: white;
+  font-size: 20px;
+  background-color: rgb(0, 127, 200);
+  border: 1.5px groove black;
+  text-align: center;
+  padding: 8px;
+}
+
+
+
+.title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.ball {
+  height: 25px;
+  width: 25px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.loaderContainer {
+  width: 100%;
+  
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid  rgb(218 41 28); /* Blue */
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  animation: spin 2s linear infinite;
+  margin:auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tooltip {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  font-size: 25px;
+  visibility: hidden;
+  height: 30px;
+  width: 220px;
+  background-color: rgb(218 41 28);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -50px;
+  left: 5%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
