@@ -26,6 +26,8 @@ class footyApp extends React.Component {
     liveGameChamp: false,
   };
 
+  
+
   async componentDidMount() {
     const API_KEY = FootyConstants.API_KEY;
     const topScorerUrl = FootyConstants.TOP_SCORER_URL;
@@ -92,7 +94,18 @@ class footyApp extends React.Component {
       });
   }
 
+ 
+
   render() {
+
+    const showTable = () => {
+      this.setState({liveGameChamp: true})
+    }
+
+    const resetTable = () => {
+      this.setState({liveGameChamp: false})
+    }
+
     const getTopScorer = () => {
       if(this.state.liveGameChamp){
         return <ChampLeagueTopScorer></ChampLeagueTopScorer>
@@ -123,6 +136,10 @@ class footyApp extends React.Component {
 
           <PrevGames></PrevGames>
           <br />
+          <div className="buttonContainer">
+          <button className="button" onClick={showTable}>Champions League</button>
+          <button className="button" onClick={resetTable}>Premier League</button>
+          </div>
           {this.state.liveGameChamp ? (
             <ChampionsLeagueTable></ChampionsLeagueTable>
           ) : (
@@ -134,7 +151,7 @@ class footyApp extends React.Component {
             </>
           )}
           <UpComing></UpComing>
-        </div>
+          </div>
       </div>
     );
   }
