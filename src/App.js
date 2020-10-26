@@ -105,7 +105,7 @@ class footyApp extends React.Component {
                 ? TeamLogos.champLeague
                 : TeamLogos["Premier League"]
             }
-            className="league-logo"
+            className={this.state.liveGameChamp ? 'champLeague-logo' : 'league-logo'}
             alt="logo"
           />
           {this.state.loading ? (
