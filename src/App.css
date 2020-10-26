@@ -31,11 +31,13 @@
 }
 
 .league-logo {
+  padding-top:15px;
   height: 250px;
   width: 250px;
 }
 
 .champLeague-logo {
+  padding-top:15px;
   height: 150px;
   width: 150px;
 }

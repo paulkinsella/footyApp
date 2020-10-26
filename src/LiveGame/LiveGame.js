@@ -4,14 +4,14 @@ import FootyConstants from "../constants/FootyConstants";
 
 export class LiveGame extends React.Component {
   state = {
-    liveGame: { homeTeam: {}, awayTeam: {} },
+    liveGame: { homeTeam: {name:''}, awayTeam: {name:''} },
     liveGameScore: {
       fullTime: {
         homeTeam: "",
         awayTeam: "",
       },
     },
-    liveGameFlag: false,
+    liveGameFlag: true,
     liveGameChamp: false,
   };
 
