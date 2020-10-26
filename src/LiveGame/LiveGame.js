@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
-import FootyConstants from "./constants/FootyConstants";
+import "./LiveGame.scss";
+import FootyConstants from "../constants/FootyConstants";
 
 export class LiveGame extends React.Component {
   state = {
@@ -56,20 +56,20 @@ export class LiveGame extends React.Component {
     return (
       <>
       <br />
-        <table>
+        <table className="custom">
           <tr>
-            <th className="customColumn">Home Team</th>
-            <th className="customColumn">Live Game</th>
-            <th className="customColumn">Away Team</th>
+            <th className="custom">Home Team</th>
+            <th className="custom">Live Game</th>
+            <th className="custom">Away Team</th>
           </tr>
           {this.state.liveGameFlag ? (
-            <tr>
-              <td>{this.state.liveGame.homeTeam.name}</td>
+            <tr className="custom">
+              <td className="custom">{this.state.liveGame.homeTeam.name}</td>
               <td className="live">
                 {this.state.liveGameScore.fullTime.homeTeam} -{" "}
                 {this.state.liveGameScore.fullTime.awayTeam}
               </td>
-              <td>{this.state.liveGame.awayTeam.name}</td>
+              <td className="custom">{this.state.liveGame.awayTeam.name}</td>
             </tr>
           ) : (
             getNoLiveGame()

@@ -1,0 +1,28 @@
+.custom table {
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.custom td {
+  width:33%;
+  height: 50px;
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.custom th {
+  color: white;
+  font-size: 20px;
+  background-color: lightGreen;
+  border: 1.5px groove black;
+  text-align: center;
+  padding: 8px;
+}
+
+.live {
+    background-color: lightGreen;
+    font-weight: bold;
+  }

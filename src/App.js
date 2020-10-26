@@ -9,7 +9,7 @@ import { ChampionsLeagueTable } from "./ChampionsLeagueTable";
 import { Sample } from "./Sample";
 import { UpComing } from "./UpComing";
 import { ChampLeagueTopScorer } from "./ChampionsLeagueTopScorer/ChampLeagueTopScorer";
-import { LiveGame } from './LiveGame'
+import { LiveGame } from './LiveGame/LiveGame'
 
 class footyApp extends React.Component {
   state = {
