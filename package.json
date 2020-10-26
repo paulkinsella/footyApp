@@ -2,7 +2,7 @@
   "name": "footy-app",
   "version": "0.1.0",
   "engines": {
-    "node": "6.11.1"
+    "node": "13.10.1"
   },
   "private": true,
   "dependencies": {
