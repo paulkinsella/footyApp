@@ -9,16 +9,17 @@ import { ChampionsLeagueTable } from "./ChampionsLeagueTable";
 import { Sample } from "./Sample";
 import { UpComing } from "./UpComing";
 import { ChampLeagueTopScorer } from "./ChampLeagueTopScorer";
+import { LiveGame } from './LiveGame'
 
 class footyApp extends React.Component {
   state = {
-    liveGame: { homeTeam: {}, awayTeam: {} },
-    liveGameScore: {
-      fullTime: {
-        homeTeam: "",
-        awayTeam: "",
-      },
-    },
+    // liveGame: { homeTeam: {}, awayTeam: {} },
+    // liveGameScore: {
+    //   fullTime: {
+    //     homeTeam: "",
+    //     awayTeam: "",
+    //   },
+    // },
     liveGameFlag: false,
     loading: true,
     upComing: { homeTeam: {}, awayTeam: {} },
@@ -26,26 +27,12 @@ class footyApp extends React.Component {
     liveGameChamp: false,
   };
 
-  
-
   async componentDidMount() {
     const API_KEY = FootyConstants.API_KEY;
     const topScorerUrl = FootyConstants.TOP_SCORER_URL;
     const mufcDataUrl = FootyConstants.MUFC_DATA_URL;
     const liveGameUrl = FootyConstants.LIVE_GAME_URL;
-    const champTopScorer = FootyConstants.CHAMP_LEAGUE_TOP_SCORER;
-
-    await fetch(champTopScorer, {
-      method: "GET",
-      headers: {
-        "X-Auth-Token": API_KEY,
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("data", data)
-      });
-
+   
     await fetch(liveGameUrl, {
       method: "GET",
       headers: {
@@ -55,10 +42,8 @@ class footyApp extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         if (data.matches[0]) {
-          this.setState({ liveGame: data.matches[0] });
-          this.setState({ liveGameScore: data.matches[0].score });
           this.setState({ liveGameFlag: true });
-          if (data.matches[0].competition.name === "UEFA Champions League") {
+         if (data.matches[0].competition.name === "UEFA Champions League") {
             this.setState({ liveGameChamp: true });
           } else {
             this.setState({ liveGameChamp: false });
@@ -94,26 +79,23 @@ class footyApp extends React.Component {
       });
   }
 
- 
-
   render() {
-
-    const showTable = () => {
-      this.setState({liveGameChamp: true})
-    }
+  const showTable = () => {
+      this.setState({ liveGameChamp: true });
+    };
 
     const resetTable = () => {
-      this.setState({liveGameChamp: false})
-    }
+      this.setState({ liveGameChamp: false });
+    };
 
     const getTopScorer = () => {
-      if(this.state.liveGameChamp){
-        return <ChampLeagueTopScorer></ChampLeagueTopScorer>
-      }else{
-        return <TopScorer></TopScorer>
+      if (this.state.liveGameChamp) {
+        return <ChampLeagueTopScorer></ChampLeagueTopScorer>;
+      } else {
+        return <TopScorer></TopScorer>;
       }
-    }
-    
+    };
+
     return (
       <div className="App">
         <div className="container">
@@ -135,10 +117,16 @@ class footyApp extends React.Component {
           )}
 
           <PrevGames></PrevGames>
+          {this.state.liveGameFlag ? <LiveGame></LiveGame> : '' }
+         
           <br />
           <div className="buttonContainer">
-          <button className="button" onClick={showTable}>Champions League</button>
-          <button className="button" onClick={resetTable}>Premier League</button>
+            <button className="button" onClick={showTable}>
+              Champions League
+            </button>
+            <button className="button" onClick={resetTable}>
+              Premier League
+            </button>
           </div>
           {this.state.liveGameChamp ? (
             <ChampionsLeagueTable></ChampionsLeagueTable>
@@ -151,7 +139,7 @@ class footyApp extends React.Component {
             </>
           )}
           <UpComing></UpComing>
-          </div>
+        </div>
       </div>
     );
   }

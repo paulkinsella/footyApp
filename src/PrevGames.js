@@ -80,16 +80,6 @@ export class PrevGames extends React.Component {
   }
 
   render() {
-    const getNoLiveGame = () => {
-      return (
-        <tr>
-          <td>Game Coming Up...</td>
-          <td className="noLiveGame"></td>
-          <td>Game Coming Up...</td>
-        </tr>
-      );
-    };
-
     return (
       <>
         <div className="tableBody">
@@ -190,19 +180,6 @@ export class PrevGames extends React.Component {
                   />
                 </td>
               </tr>
-
-              {this.state.liveGameFlag ? (
-                <tr>
-                  <td>{this.state.liveGame.homeTeam.name}</td>
-                  <td className="live">
-                    {this.state.liveGameScore.fullTime.homeTeam} -{" "}
-                    {this.state.liveGameScore.fullTime.awayTeam}
-                  </td>
-                  <td>{this.state.liveGame.awayTeam.name}</td>
-                </tr>
-              ) : (
-                getNoLiveGame()
-              )}
             </table>
           </div>
         </div>
