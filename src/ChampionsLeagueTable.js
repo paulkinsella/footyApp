@@ -39,6 +39,7 @@ export class ChampionsLeagueTable extends React.Component {
 
   render() {
     return (
+     <> <div className="title">Champions League Group H</div>
       <table className="leagueTable">
         <tr>
           <th className="customColumnTwo">Pos</th>
@@ -145,7 +146,7 @@ export class ChampionsLeagueTable extends React.Component {
           <td className="customRow">{this.state.champLeagueTable[3].draw}</td>
           <td className="customRow">{this.state.champLeagueTable[3].points}</td>
         </tr>
-      </table>
+      </table></>
     );
   }
 }
