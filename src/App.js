@@ -20,7 +20,7 @@ class footyApp extends React.Component {
     //     awayTeam: "",
     //   },
     // },
-    liveGameFlag: false,
+    liveGameFlag: true,
     loading: true,
     upComing: { homeTeam: {}, awayTeam: {} },
     champGame: false,
