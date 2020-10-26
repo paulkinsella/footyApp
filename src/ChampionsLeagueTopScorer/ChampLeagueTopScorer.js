@@ -1,7 +1,7 @@
 import React from "react";
-import FootyConstants from "./constants/FootyConstants";
-import "./App.css";
-import TeamLogos from "./TeamLogos";
+import FootyConstants from "../constants/FootyConstants";
+import './ChampionsLeagueTopScorer.scss';
+import TeamLogos from "../TeamLogos";
 
 export class ChampLeagueTopScorer extends React.Component {
   state = {
@@ -105,9 +105,9 @@ export class ChampLeagueTopScorer extends React.Component {
       <>
         <div className="title">Top 5 Champions League Goal Scorers</div>
 
-        <div className="newCardContainer">
-          <div class="card-container">
-            <div class="card">
+        <div className="newchampCardContainer">
+          <div class="champCard-container">
+            <div class="champCard">
               <header class="article-header">
                 <div>
                   <div class="category-title">
@@ -138,7 +138,7 @@ export class ChampLeagueTopScorer extends React.Component {
               </div>
             </div>
 
-            <div class="card">
+            <div class="champCard">
               <header class="article-header">
                 <div>
                   <div class="category-title">
@@ -169,7 +169,7 @@ export class ChampLeagueTopScorer extends React.Component {
               </div>
             </div>
 
-            <div class="card">
+            <div class="champCard">
               <header class="article-header">
                 <div>
                   <div class="category-title">
@@ -200,7 +200,7 @@ export class ChampLeagueTopScorer extends React.Component {
               </div>
             </div>
 
-            <div class="card">
+            <div class="champCard">
               <header class="article-header">
                 <div>
                   <div class="category-title">
@@ -231,7 +231,7 @@ export class ChampLeagueTopScorer extends React.Component {
               </div>
             </div>
 
-            <div class="card">
+            <div class="champCard">
               <header class="article-header">
                 <div>
                   <div class="category-title">

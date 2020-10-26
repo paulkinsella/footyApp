@@ -1,0 +1,103 @@
+.newchampCardContainer{
+    width:100%;
+    height: 500px;
+  }
+  
+  .champCard-container {
+    height: 100%;
+    margin: auto;
+    overflow-x: none;
+    display: flex;
+    background-color: tableBody;
+    padding: 3rem;
+    padding-bottom: 20px;
+  }
+  
+  .champCard {
+    width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    background-color: rgb(105, 44, 193);
+    box-shadow: -1rem 0 1rem #000;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: 0.2s;
+  }
+  
+  .date {
+    color: #8a8a8a;
+  }
+  
+  .tags {
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0 1rem;
+  }
+  
+  .formGuide {
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .tags div {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border: 3px solid #28242f;
+    border-radius: 2rem;
+  }
+  
+  .champCard .category-title {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .champCard .article-title {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .champCard .article-header {
+    margin-bottom: auto;
+  }
+  
+  .champCard .author {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+  }
+  
+  .info {
+    font-size: 150px;
+    color: white;
+  }
+  
+  .profile {
+    width: 50%;
+  }
+  
+  .champCard {
+    font-size: 150px;
+    color: white;
+  }
+  
+  .author {
+    font-size: 150px;
+    color: white;
+  }
+  
+  .champCard:not(:first-child) {
+    margin-left: -130px;
+  }
+  
+  .champCard:hover {
+    transform: translateY(-1rem);
+  }

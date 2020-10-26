@@ -8,7 +8,7 @@ import { PremierLeagueTable } from "./PremierLeagueTable";
 import { ChampionsLeagueTable } from "./ChampionsLeagueTable";
 import { Sample } from "./Sample";
 import { UpComing } from "./UpComing";
-import { ChampLeagueTopScorer } from "./ChampLeagueTopScorer";
+import { ChampLeagueTopScorer } from "./ChampionsLeagueTopScorer/ChampLeagueTopScorer";
 import { LiveGame } from './LiveGame'
 
 class footyApp extends React.Component {
