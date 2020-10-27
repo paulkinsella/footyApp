@@ -11,7 +11,7 @@ export class LiveGame extends React.Component {
         awayTeam: "",
       },
     },
-    liveGameFlag: true,
+    liveGameFlag: false,
     liveGameChamp: false,
   };
 
