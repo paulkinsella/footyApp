@@ -80,6 +80,16 @@ class footyApp extends React.Component {
   }
 
   render() {
+		const getNoLiveGame = () => {
+      return (
+				<table className="custom">
+        <tr>
+          <td>Game Coming Up...</td>
+          <td className="noLiveGame">-</td>
+          <td>Game Coming Up...</td>
+        </tr></table>
+      );
+    };
   const showTable = () => {
       this.setState({ liveGameChamp: true });
     };
@@ -117,7 +127,7 @@ class footyApp extends React.Component {
           )}
 
           <PrevGames></PrevGames>
-          {this.state.liveGameFlag ? <LiveGame></LiveGame> : '' }
+          {this.state.liveGameFlag ? <LiveGame></LiveGame> : getNoLiveGame() }
          
           <br />
           <div className="buttonContainer">
