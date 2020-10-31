@@ -1,6 +1,6 @@
 import React from "react";
 import FootyConstants from "./constants/FootyConstants";
-import "./App.css";
+import "./App.scss";
 import TeamLogos from "./TeamLogos";
 
 export class PrevGames extends React.Component {
@@ -90,7 +90,7 @@ export class PrevGames extends React.Component {
           />
           <div className="title">Last 3 Fixtures</div>
           <div class="tooltip">
-            <span class="tooltiptext">{this.state.mufcForm.form}</span>
+            <span class="tooltiptext">{this.state.mufcForm.form.replace(/,/g, ' ')}</span>
             <table>
               <tr>
                 <th className="customColumn">Home Team</th>

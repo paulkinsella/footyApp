@@ -1,6 +1,6 @@
 import React from "react";
 import FootyConstants from "./constants/FootyConstants";
-import "./App.css";
+import "./App.scss";
 import TeamLogos from "./TeamLogos";
 
 export class TopScorer extends React.Component {

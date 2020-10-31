@@ -1,6 +1,6 @@
 import React from "react";
 import TeamLogos from "./TeamLogos";
-import "./App.css";
+import "./App.scss";
 import FootyConstants from "./constants/FootyConstants";
 import { PrevGames } from "./PrevGames";
 import { TopScorer } from "./TopScorer";
@@ -10,6 +10,7 @@ import { Sample } from "./Sample";
 import { UpComing } from "./UpComing";
 import { ChampLeagueTopScorer } from "./ChampionsLeagueTopScorer/ChampLeagueTopScorer";
 import { LiveGame } from './LiveGame/LiveGame'
+import { LastFive } from './LastFive/LastFive'
 
 class footyApp extends React.Component {
   state = {
@@ -126,7 +127,7 @@ class footyApp extends React.Component {
             getTopScorer()
           )}
 
-          <PrevGames></PrevGames>
+          <LastFive></LastFive>
           {this.state.liveGameFlag ? <LiveGame></LiveGame> : getNoLiveGame() }
          
           <br />
@@ -149,7 +150,7 @@ class footyApp extends React.Component {
             </>
           )}
           <UpComing></UpComing>
-        </div>
+          </div>
       </div>
     );
   }
