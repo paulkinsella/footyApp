@@ -2,7 +2,6 @@ import React from "react";
 import TeamLogos from "./TeamLogos";
 import "./App.scss";
 import FootyConstants from "./constants/FootyConstants";
-import { PrevGames } from "./PrevGames";
 import { TopScorer } from "./TopScorer";
 import { PremierLeagueTable } from "./PremierLeagueTable";
 import { ChampionsLeagueTable } from "./ChampionsLeagueTable";
@@ -128,6 +127,7 @@ class footyApp extends React.Component {
           )}
 
           <LastFive></LastFive>
+          <br />
           {this.state.liveGameFlag ? <LiveGame></LiveGame> : getNoLiveGame() }
          
           <br />

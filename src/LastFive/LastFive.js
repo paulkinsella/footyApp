@@ -12,7 +12,7 @@ export class LastFive extends React.Component {
         homeTeam: {},
         awayTeam: {},
         score: { fullTime: { homeTeam: "", awayTeam: "" } },
-        season: { startDate: "" },
+        season: { utcDate: "" },
       },
       {
         matchDay: "",
@@ -20,7 +20,7 @@ export class LastFive extends React.Component {
         homeTeam: {},
         awayTeam: {},
         score: { fullTime: { homeTeam: "", awayTeam: "" } },
-        season: { startDate: "" },
+        season: { utcDate: "" },
       },
       {
         matchDay: "",
@@ -28,7 +28,7 @@ export class LastFive extends React.Component {
         homeTeam: {},
         awayTeam: {},
         score: { fullTime: { homeTeam: "", awayTeam: "" } },
-        season: { startDate: "" },
+        season: { utcDate: "" },
       },
       {
         matchDay: "",
@@ -36,7 +36,7 @@ export class LastFive extends React.Component {
         homeTeam: {},
         awayTeam: {},
         score: { fullTime: { homeTeam: "", awayTeam: "" } },
-        season: { startDate: "" },
+        season: { utcDate: "" },
       },
       {
         matchDay: "",
@@ -44,7 +44,7 @@ export class LastFive extends React.Component {
         homeTeam: {},
         awayTeam: {},
         score: { fullTime: { homeTeam: "", awayTeam: "" } },
-        season: { startDate: "" },
+        season: { utcDate: "" },
       },
     ],
   };
@@ -63,7 +63,7 @@ export class LastFive extends React.Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("LastFive", this.state.lastThree);
+        console.log("LastFive", data.matches[0]);
         this.setState({ numOfPrevMatchs: data.count });
         this.setState({
           lastThree: data.matches.slice(
@@ -78,7 +78,7 @@ export class LastFive extends React.Component {
     return (
       <>
         <div className="title">Last Five games</div>
-
+        <hr></hr>
         <div className="lastFiveCardContainer">
           <div class="lastFive-container">
           <div class="lastFiveCard">
@@ -86,9 +86,9 @@ export class LastFive extends React.Component {
             <header className="lastFiveHeader">
               {this.state.lastThree[0].competition.name}
               <div className="cardDate">
-                {this.state.lastThree[0].season.startDate}
+                {this.state.lastThree[0].utcDate}
               </div>
-            </header>
+             </header>
           </div>
           <div className="gameContainer">
             <tr className="pastGames">
@@ -131,7 +131,7 @@ export class LastFive extends React.Component {
                 <header className="lastFiveHeader">
                   {this.state.lastThree[1].competition.name}
                   <div className="cardDate">
-                    {this.state.lastThree[1].season.startDate}
+                    {this.state.lastThree[1].utcDate}
                   </div>
                 </header>
               </div>
@@ -177,7 +177,7 @@ export class LastFive extends React.Component {
                 <header className="lastFiveHeader">
                   {this.state.lastThree[2].competition.name}
                   <div className="cardDate">
-                    {this.state.lastThree[2].season.startDate}
+                    {this.state.lastThree[2].utcDate}
                   </div>
                 </header>
               </div>
@@ -222,7 +222,7 @@ export class LastFive extends React.Component {
                 <header className="lastFiveHeader">
                   {this.state.lastThree[3].competition.name}
                   <div className="cardDate">
-                    {this.state.lastThree[3].season.startDate}
+                    {this.state.lastThree[3].utcDate}
                   </div>
                 </header>
               </div>
@@ -267,7 +267,7 @@ export class LastFive extends React.Component {
                 <header className="lastFiveHeader">
                   {this.state.lastThree[4].competition.name}
                   <div className="cardDate">
-                    {this.state.lastThree[4].season.startDate}
+                    {this.state.lastThree[4].utcDate}
                   </div>
                 </header>
               </div>
@@ -306,7 +306,6 @@ export class LastFive extends React.Component {
                 </tr>
               </div>
             </div>
-
           </div>
         </div>
       </>
