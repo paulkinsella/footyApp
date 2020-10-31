@@ -1,0 +1,117 @@
+.lastFiveCardContainer{
+    width:100%;
+    height: auto;
+  }
+  
+  .lastFive-container {
+   // width: 100%;
+    height: auto;
+    margin: auto;
+    overflow-x: none;
+    display: flex;
+    background-color: #FFF;
+    padding: 3rem;
+    padding-bottom: 20px;
+  }
+  
+  .lastFiveCard {
+    border: 1px black;
+    margin-right: 20px;
+    width: 350px;
+    height: 250px;
+    border-radius: 16px;
+    background-color: #D8D8D8;
+    //display: block;
+   
+    //padding: 1.5rem;
+    }
+
+    .headerContainer {
+        max-height: 50px;
+    }
+
+    .lastFiveHeader {
+        margin:auto;
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+        text-align: left;
+        height: 50px;
+        background-color: #20282e;
+    }
+
+    .cardDate {
+        font-size: 10px; 
+    }
+
+    .gameContainer {
+        margin: auto;
+        height: auto;
+        padding-top: 20px;
+        padding-left: 2px;
+        width: 100%;
+    }
+
+    .homeTeam {
+        width: 100%;
+        float: left;
+        overflow:hidden;
+        padding-bottom: 10px;
+    }
+
+    .homeTeamScore {
+        font-weight: bold;
+        width: 15%;
+        float: right;
+        overflow:hidden;
+        padding-bottom: 10px;
+    }
+
+    .awayTeam {
+        width: 85%;
+        float: left;
+        overflow:hidden;
+    }
+
+    .awayTeamScore {
+        font-weight: bold;
+        width: 15%;
+        float: right;
+        overflow:hidden;
+    }
+
+    .cardLogo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .customTableCrest {
+        padding-top: 0;
+        border: none;
+        width: 15%;
+        align-items: center;
+      }
+
+      .teamName {
+        font-size: 14px;
+        margin-bottom: 5px;
+        text-align: left;
+        border: none;
+        width: 80;
+      }
+
+      .gameScore {
+        font-weight: bold;
+        margin-right: 5px;
+        border: none;
+    }
+
+      .pastGames {
+        height: 20px;
+        border: none;
+        width: 100%;
+      }
+  
+ 
+  
+  

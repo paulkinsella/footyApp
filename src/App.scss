@@ -66,13 +66,13 @@ width: 150px;
 }
 
 .mufcPos {
-  border: 2.5px solid rgb(218 41 28);
+  border: 2.5px solid red;
 }
 
 .champsLeague {
   width:33%;
   color: white;
-  background-color: rgba(105, 44, 193)
+  background-color: rgb(105, 44, 193);
 }
 
 /* .champsLeague:hover:after {
@@ -92,7 +92,7 @@ width: 150px;
 .europaLeague {
   width:33%;
   color: white;
-  background-color:  rgba(241, 136, 7);
+  background-color:  rgb(241, 136, 7);
 }
 
 .tableCrest {
@@ -152,7 +152,7 @@ width: 150px;
 }
 
 .noLiveGame {
-  background-color: rgb(218 41 28);
+  background-color: rgb(218, 41, 28);
   font-weight: bold;
 }
 
@@ -184,7 +184,7 @@ width: 150px;
   width: 100%;
   height: 350px;
   border-radius: 16px;
-  background-color: rgb(218 41 28);
+  background-color: rgb(218, 41, 28);
   box-shadow: -1rem 0 1rem #000;
   display: flex;
   flex-direction: column;
@@ -325,7 +325,7 @@ th {
 
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid  rgb(218 41 28); /* Blue */
+  border-top: 16px solid  rgb(218, 41, 28); /* Blue */
   border-radius: 50%;
   width: 75px;
   height: 75px;
@@ -350,7 +350,7 @@ th {
   visibility: hidden;
   height: 30px;
   width: 220px;
-  background-color: rgb(218 41 28);
+  background-color: rgb(218, 41, 28);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -439,7 +439,7 @@ input:checked + .slider:before {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color:rgba(105, 44, 193);
+  background-color:rgb(105, 44, 193);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
