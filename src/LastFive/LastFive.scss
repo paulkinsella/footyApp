@@ -18,7 +18,7 @@
     border: 1px black;
     margin-right: 20px;
     width: 350px;
-    height: 250px;
+    height: 220px;
     border-radius: 16px;
     background-color: #E8E8E8;
     //display: block;
@@ -93,7 +93,7 @@
     }
 
     .customTableCrest {
-        padding-top: 0;
+        padding-top: 5;
         border: none;
         width: 15%;
         align-items: center;
@@ -121,6 +121,14 @@
 
       hr {
           width: 75%;
+      }
+
+      td {
+          height: 25px;
+      }
+
+      tr{
+          height: 25px;
       }
   
  
