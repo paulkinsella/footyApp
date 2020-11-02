@@ -1,133 +1,148 @@
-.lastFiveCardContainer{
-    width:100%;
-    height: auto;
-  }
-  
-  .lastFive-container {
-   // width: 100%;
-    height: auto;
-    margin: auto;
-    overflow-x: none;
-    display: flex;
-    background-color: #FFF;
-    padding: 3rem;
-    padding-bottom: 20px;
-  }
-  
+.lastFiveCardContainer {
+  width: 100%;
+  height: auto;
+}
+
+.lastFive-container {
+  // width: 100%;
+  height: auto;
+  margin: auto;
+  overflow-x: none;
+  display: flex;
+  background-color: #fff;
+  padding: 3rem;
+  padding-bottom: 20px;
+}
+
+.lastFiveCard {
+  border: 1px black;
+  margin-right: 20px;
+  width: 350px;
+  height: 220px;
+  border-radius: 16px;
+  background-color: #e8e8e8;
+  //display: block;
+
+  //padding: 1.5rem;
+}
+
+.headerContainer {
+  width: 100%;
+  display: inline-block;
+  max-height: 50px;
+}
+
+.lastFiveHeader {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  text-align: left;
+  height: 50px;
+  background-color: #20282e;
+}
+
+.cardDate {
+  display: block;
+  font-size: 10px;
+}
+
+.gameContainer {
+  margin: auto;
+  height: auto;
+  padding-top: 20px;
+  padding-left: 2px;
+  width: 100%;
+}
+
+.homeTeam {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.homeTeamScore {
+  font-weight: bold;
+  width: 15%;
+  float: right;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.awayTeam {
+  width: 85%;
+  float: left;
+  overflow: hidden;
+}
+
+.awayTeamScore {
+  font-weight: bold;
+  width: 15%;
+  float: right;
+  overflow: hidden;
+}
+
+.cardLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.customTableCrest {
+  padding-top: 5;
+  border: none;
+  width: 15%;
+  align-items: center;
+}
+
+.teamName {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: left;
+  border: none;
+  width: 80;
+}
+
+.gameScore {
+  font-weight: bold;
+  margin-right: 5px;
+  border: none;
+}
+
+.pastGames {
+  height: 20px;
+  border: none;
+  width: 100%;
+}
+
+hr {
+  width: 75%;
+}
+
+td {
+  height: 25px;
+}
+
+tr {
+  height: 25px;
+}
+
+@media only screen and (max-width: 600px) {
   .lastFiveCard {
     border: 1px black;
-    margin-right: 20px;
-    width: 350px;
-    height: 220px;
+    margin: auto;
+    width: 100%;
+    height: auto;
     border-radius: 16px;
-    background-color: #E8E8E8;
-    //display: block;
-   
-    //padding: 1.5rem;
-    }
+    background-color: #e8e8e8;
+    margin-bottom: 20px;
+  }
 
-    .headerContainer {
-        width: 100%;
-        display: inline-block;
-        max-height: 50px;
-    }
-
-    .lastFiveHeader {
-        display: block;
-        margin:auto;
-        padding: 10px;
-        font-size: 14px;
-        color: white;
-        text-align: left;
-        height: 50px;
-        background-color: #20282e;
-    }
-
-    .cardDate {
-        display: block;
-        font-size: 10px; 
-    }
-
-    .gameContainer {
-        margin: auto;
-        height: auto;
-        padding-top: 20px;
-        padding-left: 2px;
-        width: 100%;
-    }
-
-    .homeTeam {
-        width: 100%;
-        float: left;
-        overflow:hidden;
-        padding-bottom: 10px;
-    }
-
-    .homeTeamScore {
-        font-weight: bold;
-        width: 15%;
-        float: right;
-        overflow:hidden;
-        padding-bottom: 10px;
-    }
-
-    .awayTeam {
-        width: 85%;
-        float: left;
-        overflow:hidden;
-    }
-
-    .awayTeamScore {
-        font-weight: bold;
-        width: 15%;
-        float: right;
-        overflow:hidden;
-    }
-
-    .cardLogo {
-        height: 40px;
-        width: 40px;
-     }
-
-    .customTableCrest {
-        padding-top: 5;
-        border: none;
-        width: 15%;
-        align-items: center;
-      }
-
-      .teamName {
-        font-size: 14px;
-        margin-bottom: 5px;
-        text-align: left;
-        border: none;
-        width: 80;
-      }
-
-      .gameScore {
-        font-weight: bold;
-        margin-right: 5px;
-        border: none;
-    }
-
-      .pastGames {
-        height: 20px;
-        border: none;
-        width: 100%;
-      }
-
-      hr {
-          width: 75%;
-      }
-
-      td {
-          height: 25px;
-      }
-
-      tr{
-          height: 25px;
-      }
-  
- 
-  
-  
+  .lastFive-container {
+    padding: 0;
+    height: auto;
+    display: inline-block;
+    background-color: #fff;
+  }
+}
