@@ -3,7 +3,7 @@ import TeamLogos from "./TeamLogos";
 import "./App.scss";
 import FootyConstants from "./constants/FootyConstants";
 import { TopScorer } from "./TopScorer";
-import { PremierLeagueTable } from "./PremierLeagueTable";
+import { PremierLeagueTable } from "./PremierLeagueTable/PremierLeagueTable";
 import { ChampionsLeagueTable } from "./ChampionsLeagueTable";
 import { Sample } from "./Sample";
 import { UpComing } from "./UpComing";
@@ -135,6 +135,8 @@ class footyApp extends React.Component {
             <button className="button" onClick={showTable}>
               Champions League
             </button>
+            </div>
+            <div className="buttonContainer">
             <button className="button" onClick={resetTable}>
               Premier League
             </button>
