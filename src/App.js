@@ -146,7 +146,9 @@ class footyApp extends React.Component {
           ) : (
             <>
               {" "}
+              <div className="sample">
               <Sample></Sample>
+              </div>
               <div className="title">Premier League</div>
               <PremierLeagueTable></PremierLeagueTable>
             </>
