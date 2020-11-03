@@ -1,6 +1,5 @@
 .App {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding-bottom: 20px;;
   overflow-y: scroll;
   text-align: center;
   width: 100%;
@@ -296,8 +295,8 @@ th {
 
 
 .title {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 25px;
   font-weight: bold;
 }
@@ -428,8 +427,9 @@ input:checked + .slider:before {
 }
 
 .button {
-  margin-right: 20px;
-  margin-left: 20px;
+  width: 300px;
+  // margin-right: 20px;
+  // margin-left: 20px;
   margin-bottom: 20px;
   display: inline-block;
   padding: 15px 25px;
@@ -472,5 +472,25 @@ input:checked + .slider:before {
   .button {
   width: 85%;
   margin: auto;
+  }
+
+  .newCardContainer {
+    display: none;
+  }
+
+  .league-logo {
+    padding-top:15px;
+    height: 150px;
+    width: 150px;
+  }
+
+  .champLeague-logo {
+    padding-top:15px;
+    height: 150px;
+    width: 150px;
+  }
+
+  .sample {
+    display: none;
   }
 }

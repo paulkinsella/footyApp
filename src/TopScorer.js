@@ -102,9 +102,8 @@ export class TopScorer extends React.Component {
   render() {
     return (
       <>
-        <div className="title">Top 5 Premier League Goal Scorers</div>
-
         <div className="newCardContainer">
+        <div className="title">Top 5 Premier League Goal Scorers</div>
           <div class="card-container">
             <div class="card">
               <header class="article-header">
