@@ -37,8 +37,24 @@ export class ChampionsLeagueTable extends React.Component {
       });
   }
 
-  render() {
-    return (
+
+
+ render() {
+
+  const renderRows = () => {
+    return this.state.champLeagueTable.map(row => <tr className={"champsLeague"}>
+      <td className="customRow">{row.position}</td>
+      <td className="customRow"><img className="tableCrest" src={row.team.crestUrl} /></td>
+      <td className="customRow">{row.team.name}</td>
+      <td className="customRow">{row.playedGames}</td>
+      <td className="customRow">{row.won}</td>
+      <td className="customRow">{row.lost}</td>
+      <td className="customRow">{row.draw}</td>
+      <td className="customRow">{row.points}</td>
+      </tr>)
+    }
+
+  return (
      <> <div className="title">Champions League Group H</div>
       <table className="leagueTable">
         <tr>
@@ -58,94 +74,7 @@ export class ChampionsLeagueTable extends React.Component {
           <th className="customColumnTwo">D</th>
           <th className="customColumnTwo">Pts</th>
         </tr>
-        <tr className={"champsLeague"}>
-          <td className="customRow">
-            {this.state.champLeagueTable[0].position}
-          </td>
-          <td className="customRow">
-            <img
-              className="tableCrest"
-              src={this.state.champLeagueTable[0].team.crestUrl}
-              alt=""
-            />
-          </td>
-          <td className="customColumnTeam">
-            {this.state.champLeagueTable[0].team.name}
-          </td>
-          <td className="customRow">
-            {this.state.champLeagueTable[0].playedGames}
-          </td>
-          <td className="customRow">{this.state.champLeagueTable[0].won}</td>
-          <td className="customRow">{this.state.champLeagueTable[0].lost}</td>
-          <td className="customRow">{this.state.champLeagueTable[0].draw}</td>
-          <td className="customRow">{this.state.champLeagueTable[0].points}</td>
-        </tr>
-        <tr className={"champsLeague"}>
-          <td className="customRow">
-            {this.state.champLeagueTable[1].position}
-          </td>
-          <td className="customRow">
-            <img
-              className="tableCrest"
-              src={this.state.champLeagueTable[1].team.crestUrl}
-              alt=""
-            />
-          </td>
-          <td className="customRow">
-            {this.state.champLeagueTable[1].team.name}
-          </td>
-          <td className="customRow">
-            {this.state.champLeagueTable[1].playedGames}
-          </td>
-          <td className="customRow">{this.state.champLeagueTable[1].won}</td>
-          <td className="customRow">{this.state.champLeagueTable[1].lost}</td>
-          <td className="customRow">{this.state.champLeagueTable[1].draw}</td>
-          <td className="customRow">{this.state.champLeagueTable[1].points}</td>
-        </tr>
-        <tr className={"champsLeague"}>
-          <td className="customRow">
-            {this.state.champLeagueTable[2].position}
-          </td>
-          <td className="customRow">
-            <img
-              className="tableCrest"
-              src={this.state.champLeagueTable[2].team.crestUrl}
-              alt=""
-            />
-          </td>
-          <td className="customRow">
-            {this.state.champLeagueTable[2].team.name}
-          </td>
-          <td className="customRow">
-            {this.state.champLeagueTable[2].playedGames}
-          </td>
-          <td className="customRow">{this.state.champLeagueTable[2].won}</td>
-          <td className="customRow">{this.state.champLeagueTable[2].lost}</td>
-          <td className="customRow">{this.state.champLeagueTable[2].draw}</td>
-          <td className="customRow">{this.state.champLeagueTable[2].points}</td>
-        </tr>
-        <tr className={"champsLeague"}>
-          <td className="customRow">
-            {this.state.champLeagueTable[3].position}
-          </td>
-          <td className="customRow">
-            <img
-              className="tableCrest"
-              src={this.state.champLeagueTable[3].team.crestUrl}
-              alt=""
-            />
-          </td>
-          <td className="customRow">
-            {this.state.champLeagueTable[3].team.name}
-          </td>
-          <td className="customRow">
-            {this.state.champLeagueTable[3].playedGames}
-          </td>
-          <td className="customRow">{this.state.champLeagueTable[3].won}</td>
-          <td className="customRow">{this.state.champLeagueTable[3].lost}</td>
-          <td className="customRow">{this.state.champLeagueTable[3].draw}</td>
-          <td className="customRow">{this.state.champLeagueTable[3].points}</td>
-        </tr>
+        {renderRows()}
       </table></>
     );
   }

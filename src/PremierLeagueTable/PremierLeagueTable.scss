@@ -1,132 +1,136 @@
 .relegationZone {
-    width:33%;
-    background-color: lightcoral;
-  }
-  
-  .mufcPos {
-    border: 2.5px solid red;
-  }
-  
-  .champsLeague {
-    width:33%;
-    color: white;
-    background-color: rgb(105, 44, 193);
-  }
+  width:33%;
+  background-color: lightcoral;
+}
 
-  .tableCrest {
-    margin-left: 2px;
-    height: 50px;
-    width: 50px;
-  }
-  
-  .customColumn {
-    width: 33%;
-  }
-  
-  .customColumnPos {
-    width:10%;
-  }
+.mufcPos {
+  border: 2.5px solid red;
+}
 
-  .customColumnCrest {
-    width:10%;
-  }
+.champsLeague {
+  width:33%;
+  color: white;
+  background-color: rgb(105, 44, 193);
+}
 
-  .customColumnGP {
-      width: 10%;
-  }
+.tableCrest {
+  margin-left: 2px;
+  height: 50px;
+  width: 50px;
+}
 
-  .customColumnW {
+.customColumn {
+  width: 33%;
+}
+
+.customColumnPos {
+  width:10%;
+}
+
+.customColumnCrest {
+  width:10%;
+}
+
+.customColumnGP {
     width: 10%;
+}
+
+.customColumnW {
+  width: 10%;
 }
 
 .customColumnL {
-    width: 10%;
+  width: 10%;
 }
 
 .customColumnD {
-    width: 10%;
+  width: 10%;
 }
 
 .customColumnWPts {
-    width: 10%;
+  width: 10%;
 }
+
+.leagueTable {
+  border: solid 1px
+}
+
+.customRowD {
+  border-style: solid 1px;
+  border-color: black;
+}
+
+.league{
+  background-color: #fff;
+}
+
+.customRowL {
+  border-style: solid 1px;
+  border-color: black;
+}
+
+.customRowW {
+  border-style: solid 1px;
+  border-color: black;
+}
+
+.customRowPts {
+  border-style: solid 1px;
+  border-color: black;
+}
+
+.customRowLogo {
+  border-style: solid 1px;
+  border-color: black;
+}
+
+.customRow {
+  border-style: solid 1px;
+  border-color: black;
+}
+
+.customColumnpos {
+  width:20%;
+}
+
+.customColumnTeam {
+  width: auto;
+  text-align: center;
+  border: solid 1px black
+}
+
+@media only screen and (max-width: 600px) {
+  .customColumnCrest {
+      display: none;
+    }
   
-  .leagueTable {
-    border: solid 1px
+    .customColumnW {
+      display: none;
   }
-
-  .customRowD {
-    border-style: solid 1px;
-    border-color: black;
+  
+  .customColumnL {
+      display: none;
   }
-
-  .customRowL {
-    border-style: solid 1px;
-    border-color: black;
-  }
-
-  .customRowW {
-    border-style: solid 1px;
-    border-color: black;
-  }
-
-  .customRowPts {
-    border-style: solid 1px;
-    border-color: black;
+  
+  .customColumnD {
+      display: none;
   }
 
   .customRowLogo {
-    border-style: solid 1px;
-    border-color: black;
+      display: none;
   }
 
-  .customRow {
-    border-style: solid 1px;
-    border-color: black;
+  .customRowW {
+      display: none;
   }
+
+  .customRowD {
+      display: none;
+  }
+
+  .customRowL {
+      display: none;
+  }
+
   
-  .customColumnpos {
-    width:20%;
-  }
-  
-  .customColumnTeam {
-    width: auto;
-    text-align: center;
-    border: solid 1px black
-  }
-
-  @media only screen and (max-width: 600px) {
-    .customColumnCrest {
-        display: none;
-      }
-    
-      .customColumnW {
-        display: none;
-    }
-    
-    .customColumnL {
-        display: none;
-    }
-    
-    .customColumnD {
-        display: none;
-    }
-
-    .customRowLogo {
-        display: none;
-    }
-
-    .customRowW {
-        display: none;
-    }
-
-    .customRowD {
-        display: none;
-    }
-
-    .customRowL {
-        display: none;
-    }
-
-    
 }

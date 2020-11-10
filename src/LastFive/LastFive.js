@@ -77,6 +77,7 @@ export class LastFive extends React.Component {
   render() {
     return (
       <>
+      <hr></hr>
         <div className="title">Last Five games</div>
         <hr></hr>
         <div className="lastFiveCardContainer">
