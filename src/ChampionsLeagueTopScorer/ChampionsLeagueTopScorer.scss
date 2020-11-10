@@ -97,6 +97,10 @@
   .champCard:not(:first-child) {
     margin-left: -130px;
   }
+
+  .newchampCardContainer {
+    display: none;
+  }
   
   .champCard:hover {
     transform: translateY(-1rem);

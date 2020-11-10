@@ -44,12 +44,12 @@ export class ChampionsLeagueTable extends React.Component {
   const renderRows = () => {
     return this.state.champLeagueTable.map(row => <tr className={"champsLeague"}>
       <td className="customRow">{row.position}</td>
-      <td className="customRow"><img className="tableCrest" src={row.team.crestUrl} /></td>
+      <td className="customColumnCrest"><img className="tableCrest" src={row.team.crestUrl} /></td>
       <td className="customRow">{row.team.name}</td>
       <td className="customRow">{row.playedGames}</td>
-      <td className="customRow">{row.won}</td>
-      <td className="customRow">{row.lost}</td>
-      <td className="customRow">{row.draw}</td>
+      <td className="customRowW">{row.won}</td>
+      <td className="customRowL">{row.lost}</td>
+      <td className="customRowD">{row.draw}</td>
       <td className="customRow">{row.points}</td>
       </tr>)
     }
@@ -59,7 +59,7 @@ export class ChampionsLeagueTable extends React.Component {
       <table className="leagueTable">
         <tr>
           <th className="customColumnTwo">Pos</th>
-          <th className="customColumnTwo">
+          <th className="customColumnCrest">
             {" "}
             <img
               src={TeamLogos.champLeague}
@@ -68,11 +68,11 @@ export class ChampionsLeagueTable extends React.Component {
             />
           </th>
           <th className="customColumnTeam">Team</th>
-          <th className="customColumnTwo">Gp</th>
-          <th className="customColumnTwo">W</th>
-          <th className="customColumnTwo">L</th>
-          <th className="customColumnTwo">D</th>
-          <th className="customColumnTwo">Pts</th>
+           <th className="customColumnGP">Gp</th>
+           <th className="customColumnW">W</th>
+           <th className="customColumnL">L</th>
+           <th className="customColumnD">D</th>
+           <th className="customColumnPts">Pts</th>
         </tr>
         {renderRows()}
       </table></>

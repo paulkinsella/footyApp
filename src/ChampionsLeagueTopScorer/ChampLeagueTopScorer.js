@@ -103,9 +103,10 @@ export class ChampLeagueTopScorer extends React.Component {
   render() {
     return (
       <>
-        <div className="title">Top 5 Champions League Goal Scorers</div>
+        
 
         <div className="newchampCardContainer">
+        <div className="title">Top 5 Champions League Goal Scorers</div>
           <div class="champCard-container">
             <div class="champCard">
               <header class="article-header">
