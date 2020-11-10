@@ -494,3 +494,39 @@ input:checked + .slider:before {
     display: none;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .customColumnCrest {
+      display: none;
+    }
+  
+    .customColumnW {
+      display: none;
+  }
+  
+  .customColumnL {
+      display: none;
+  }
+  
+  .customColumnD {
+      display: none;
+  }
+
+  .customRowLogo {
+      display: none;
+  }
+
+  .customRowW {
+      display: none;
+  }
+
+  .customRowD {
+      display: none;
+  }
+
+  .customRowL {
+      display: none;
+  }
+
+  
+}
