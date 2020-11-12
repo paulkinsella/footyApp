@@ -71,7 +71,7 @@ export class PremierLeagueTable extends React.Component {
           : "League"
       }>
         <td className="customRow">{row.position}</td>
-        <td className="customColumnCrest"><img className="tableCrest" src={row.team.crestUrl} /></td>
+        <td className="customColumnCrest"><img className="tableCrest" alt="" src={row.team.crestUrl} /></td>
         <td className="customRow">{row.team.name}</td>
         <td className="customRow">{row.playedGames}</td>
         <td className="customColumnW">{row.won}</td>
