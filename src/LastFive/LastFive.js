@@ -75,6 +75,54 @@ export class LastFive extends React.Component {
   }
 
   render() {
+    const renderCard = () => {
+      return this.state.lastThree.map(card => <div class="lastFiveCard">
+      <div className="headerContainer">
+        <header className="lastFiveHeader">
+          {card.competition.name}
+          <div className="cardDate">
+            {card.utcDate}
+          </div>
+         </header>
+      </div>
+      <div className="gameContainer">
+        <tr className="pastGames">
+          <td className="customTableCrest">
+            <img
+              src={TeamLogos[card.homeTeam.name]}
+              className="cardLogo"
+              alt="logo"
+            />
+          </td>
+
+          <td className="teamName">
+            {card.homeTeam.name}
+          </td>
+          <td className="gameScore">
+            {card.score.fullTime.homeTeam}
+          </td>
+        </tr>
+        <tr className="pastGames">
+          <td className="customTableCrest">
+            <img
+              src={TeamLogos[card.awayTeam.name]}
+              className="cardLogo"
+              alt="logo"
+            />
+          </td>
+
+          <td className="teamName">
+            {card.awayTeam.name}
+          </td>
+          <td className="gameScore">
+            {card.score.fullTime.awayTeam}
+          </td>
+        </tr>
+      </div>
+    </div> )
+    }
+
+
     return (
       <>
       <hr></hr>
@@ -82,231 +130,7 @@ export class LastFive extends React.Component {
         <hr></hr>
         <div className="lastFiveCardContainer">
           <div class="lastFive-container">
-          <div class="lastFiveCard">
-          <div className="headerContainer">
-            <header className="lastFiveHeader">
-              {this.state.lastThree[0].competition.name}
-              <div className="cardDate">
-                {this.state.lastThree[0].utcDate}
-              </div>
-             </header>
-          </div>
-          <div className="gameContainer">
-            <tr className="pastGames">
-              <td className="customTableCrest">
-                <img
-                  src={TeamLogos[this.state.lastThree[0].homeTeam.name]}
-                  className="cardLogo"
-                  alt="logo"
-                />
-              </td>
-
-              <td className="teamName">
-                {this.state.lastThree[0].homeTeam.name}
-              </td>
-              <td className="gameScore">
-                {this.state.lastThree[0].score.fullTime.homeTeam}
-              </td>
-            </tr>
-            <tr className="pastGames">
-              <td className="customTableCrest">
-                <img
-                  src={TeamLogos[this.state.lastThree[0].awayTeam.name]}
-                  className="cardLogo"
-                  alt="logo"
-                />
-              </td>
-
-              <td className="teamName">
-                {this.state.lastThree[0].awayTeam.name}
-              </td>
-              <td className="gameScore">
-                {this.state.lastThree[0].score.fullTime.awayTeam}
-              </td>
-            </tr>
-          </div>
-        </div>
-
-            <div class="lastFiveCard">
-              <div className="headerContainer">
-                <header className="lastFiveHeader">
-                  {this.state.lastThree[1].competition.name}
-                  <div className="cardDate">
-                    {this.state.lastThree[1].utcDate}
-                  </div>
-                </header>
-              </div>
-              <div className="gameContainer">
-                <tr className="pastGames">
-                  <td className="customTableCrest">
-                    <img
-                      src={TeamLogos[this.state.lastThree[1].homeTeam.name]}
-                      className="cardLogo"
-                      alt="logo"
-                    />
-                  </td>
-
-                  <td className="teamName">
-                    {this.state.lastThree[1].homeTeam.name}
-                  </td>
-                  <td className="gameScore">
-                    {" "}
-                    {this.state.lastThree[1].score.fullTime.homeTeam}
-                  </td>
-                </tr>
-                <tr className="pastGames">
-                  <td className="customTableCrest">
-                    <img
-                      src={TeamLogos[this.state.lastThree[1].awayTeam.name]}
-                      className="cardLogo"
-                      alt="logo"
-                    />
-                  </td>
-
-                  <td className="teamName">
-                    {this.state.lastThree[1].awayTeam.name}
-                  </td>
-                  <td className="gameScore">
-                    {this.state.lastThree[1].score.fullTime.awayTeam}
-                  </td>
-                </tr>
-              </div>
-            </div>
-
-            <div class="lastFiveCard">
-              <div className="headerContainer">
-                <header className="lastFiveHeader">
-                  {this.state.lastThree[2].competition.name}
-                  <div className="cardDate">
-                    {this.state.lastThree[2].utcDate}
-                  </div>
-                </header>
-              </div>
-              <div className="gameContainer">
-                <tr className="pastGames">
-                  <td className="customTableCrest">
-                    <img
-                      src={TeamLogos[this.state.lastThree[2].homeTeam.name]}
-                      className="cardLogo"
-                      alt="logo"
-                    />
-                  </td>
-
-                  <td className="teamName">
-                    {this.state.lastThree[2].homeTeam.name}
-                  </td>
-                  <td className="gameScore">
-                    {this.state.lastThree[2].score.fullTime.homeTeam}
-                  </td>
-                </tr>
-                <tr className="pastGames">
-                  <td className="customTableCrest">
-                    <img
-                      src={TeamLogos[this.state.lastThree[2].awayTeam.name]}
-                      className="cardLogo"
-                      alt="logo"
-                    />
-                  </td>
-
-                  <td className="teamName">
-                    {this.state.lastThree[2].awayTeam.name}
-                  </td>
-                  <td className="gameScore">
-                    {this.state.lastThree[2].score.fullTime.awayTeam}
-                  </td>
-                </tr>
-              </div>
-            </div>
-
-            <div class="lastFiveCard">
-              <div className="headerContainer">
-                <header className="lastFiveHeader">
-                  {this.state.lastThree[3].competition.name}
-                  <div className="cardDate">
-                    {this.state.lastThree[3].utcDate}
-                  </div>
-                </header>
-              </div>
-              <div className="gameContainer">
-                <tr className="pastGames">
-                  <td className="customTableCrest">
-                    <img
-                      src={TeamLogos[this.state.lastThree[3].homeTeam.name]}
-                      className="cardLogo"
-                      alt="logo"
-                    />
-                  </td>
-
-                  <td className="teamName">
-                    {this.state.lastThree[3].homeTeam.name}
-                  </td>
-                  <td className="gameScore">
-                    {this.state.lastThree[3].score.fullTime.homeTeam}
-                  </td>
-                </tr>
-                <tr className="pastGames">
-                  <td className="customTableCrest">
-                    <img
-                      src={TeamLogos[this.state.lastThree[3].awayTeam.name]}
-                      className="cardLogo"
-                      alt="logo"
-                    />
-                  </td>
-
-                  <td className="teamName">
-                    {this.state.lastThree[3].awayTeam.name}
-                  </td>
-                  <td className="gameScore">
-                    {this.state.lastThree[3].score.fullTime.awayTeam}
-                  </td>
-                </tr>
-              </div>
-            </div>
-
-            <div class="lastFiveCard">
-              <div className="headerContainer">
-                <header className="lastFiveHeader">
-                  {this.state.lastThree[4].competition.name}
-                  <div className="cardDate">
-                    {this.state.lastThree[4].utcDate}
-                  </div>
-                </header>
-              </div>
-              <div className="gameContainer">
-                <tr className="pastGames">
-                  <td className="customTableCrest">
-                    <img
-                      src={TeamLogos[this.state.lastThree[4].homeTeam.name]}
-                      className="cardLogo"
-                      alt="logo"
-                    />
-                  </td>
-
-                  <td className="teamName">
-                    {this.state.lastThree[4].homeTeam.name}
-                  </td>
-                  <td className="gameScore">
-                    {this.state.lastThree[4].score.fullTime.homeTeam}
-                  </td>
-                </tr>
-                <tr className="pastGames">
-                  <td className="customTableCrest">
-                    <img
-                      src={TeamLogos[this.state.lastThree[4].awayTeam.name]}
-                      className="cardLogo"
-                      alt="logo"
-                    />
-                  </td>
-
-                  <td className="teamName">
-                    {this.state.lastThree[4].awayTeam.name}
-                  </td>
-                  <td className="gameScore">
-                    {this.state.lastThree[4].score.fullTime.awayTeam}
-                  </td>
-                </tr>
-              </div>
-            </div>
+          {renderCard()}
           </div>
         </div>
       </>

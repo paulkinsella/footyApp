@@ -134,7 +134,7 @@ export class ChampLeagueTopScorer extends React.Component {
                 </div>
               </div>
               <div class="tags">
-                <div>Premier League</div>
+                <div>Champions League</div>
                 <div>Top Scorers</div>
               </div>
             </div>
@@ -165,7 +165,7 @@ export class ChampLeagueTopScorer extends React.Component {
                 </div>
               </div>
               <div class="tags">
-                <div>Premier League</div>
+                <div>Champions League</div>
                 <div>Top Scorers</div>
               </div>
             </div>
@@ -196,7 +196,7 @@ export class ChampLeagueTopScorer extends React.Component {
                 </div>
               </div>
               <div class="tags">
-                <div>Premier League</div>
+                <div>Champions League</div>
                 <div>Top Scorers</div>
               </div>
             </div>
@@ -227,7 +227,7 @@ export class ChampLeagueTopScorer extends React.Component {
                 </div>
               </div>
               <div class="tags">
-                <div>Premier League</div>
+                <div>Champions League</div>
                 <div>Top Scorers</div>
               </div>
             </div>
@@ -258,7 +258,7 @@ export class ChampLeagueTopScorer extends React.Component {
                 </div>
               </div>
               <div class="tags">
-                <div>Premier League</div>
+                <div>Champions League</div>
                 <div>Top Scorers</div>
               </div>
             </div>

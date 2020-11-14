@@ -98,10 +98,20 @@
     margin-left: -130px;
   }
 
-  .newchampCardContainer {
-    display: none;
-  }
+  // .newchampCardContainer {
+  //   display: none;
+  // }
   
   .champCard:hover {
     transform: translateY(-1rem);
+  }
+
+  @media only screen and (max-width: 600px) {
+    .newchampCardContainer {
+      display: none;
+    }
+
+    .customRow{
+      text-align: left;
+    }
   }
