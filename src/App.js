@@ -13,13 +13,6 @@ import { LastFive } from './LastFive/LastFive'
 
 class footyApp extends React.Component {
   state = {
-    // liveGame: { homeTeam: {}, awayTeam: {} },
-    // liveGameScore: {
-    //   fullTime: {
-    //     homeTeam: "",
-    //     awayTeam: "",
-    //   },
-    // },
     liveGameFlag: false,
     loading: true,
     upComing: { homeTeam: {}, awayTeam: {} },
@@ -80,6 +73,7 @@ class footyApp extends React.Component {
   }
 
   render() {
+
 		const getNoLiveGame = () => {
       return (
 				<table className="custom">
@@ -90,6 +84,7 @@ class footyApp extends React.Component {
         </tr></table>
       );
     };
+
   const showTable = () => {
       this.setState({ liveGameChamp: true });
     };
@@ -100,9 +95,9 @@ class footyApp extends React.Component {
 
     const getTopScorer = () => {
       if (this.state.liveGameChamp) {
-        return <ChampLeagueTopScorer></ChampLeagueTopScorer>;
+        return <ChampLeagueTopScorer/>;
       } else {
-        return <TopScorer></TopScorer>;
+        return <TopScorer/>;
       }
     };
 
@@ -126,23 +121,23 @@ class footyApp extends React.Component {
             getTopScorer()
           )}
 
-          <LastFive></LastFive>
+          <LastFive/>
           <br />
-          {this.state.liveGameFlag ? <LiveGame></LiveGame> : getNoLiveGame() }
+          {this.state.liveGameFlag ? <LiveGame/> : getNoLiveGame() }
          
           <br />
           <div className="buttonContainer">
             <button className="button" onClick={showTable}>
               Champions League
             </button>
-            </div>
-            <div className="buttonContainer">
+          
+            <div className="buttonContainer"></div>
             <button className="button" onClick={resetTable}>
               Premier League
             </button>
           </div>
           {this.state.liveGameChamp ? (
-            <ChampionsLeagueTable></ChampionsLeagueTable>
+            <ChampionsLeagueTable/>
           ) : (
             <>
               {" "}
@@ -150,10 +145,10 @@ class footyApp extends React.Component {
               <Sample></Sample>
               </div>
               <div className="title">Premier League</div>
-              <PremierLeagueTable></PremierLeagueTable>
+              <PremierLeagueTable/>
             </>
           )}
-          <UpComing></UpComing>
+          <UpComing/>
           </div>
       </div>
     );
