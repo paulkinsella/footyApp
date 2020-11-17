@@ -9,7 +9,7 @@
 .formGuide {
   display: inline-block;
   white-space: nowrap;
-  animation: floatText 15s infinite linear;
+  animation: floatText 35s infinite linear;
   padding-left: 100%; /*Initial offset*/
   padding-bottom: 20px;
 }
@@ -202,14 +202,14 @@ width: 150px;
   margin: 1rem 0 1rem;
 }
 
-.formGuide {
-  position: relative;
-  top: 0;
-  background-color: transparent;
-  padding: 10px;
-  font-size: 15px;
-  margin-bottom: 20px;
-}
+// .formGuide {
+//   position: relative;
+//   top: 0;
+//   background-color: transparent;
+//   padding: 10px;
+//   font-size: 15px;
+//   margin-bottom: 20px;
+// }
 
 .tags div {
   font-size: 9px;
@@ -315,6 +315,10 @@ th {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.upComing-match{
+  height: 50px;
+  width: 50px;
 }
 
 .loaderContainer {
