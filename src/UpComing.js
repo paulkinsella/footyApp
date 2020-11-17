@@ -5,7 +5,7 @@ import TeamLogos from "./TeamLogos";
 
 export class UpComing extends React.Component {
   state = {
-    upComing: { homeTeam: {}, awayTeam: {} },
+    upComing: { homeTeam: {}, awayTeam: {}, competition: { name: "" } },
   };
 
   async componentDidMount() {
@@ -20,6 +20,7 @@ export class UpComing extends React.Component {
     })
       .then((response) => response.json())
       .then((data) => {
+        console.log("Upcoming", data);
         this.setState({ upComing: data.matches[0] });
         this.setState({ compName: data.matches[0].competition.name });
       });
@@ -27,13 +28,28 @@ export class UpComing extends React.Component {
     //GET MUFC DATA
   }
   render() {
+    const renderImage = () => {
+      if (this.state.upComing.competition.name === FootyConstants.CHAMP) {
+        return (
+          <img className="upComing-match" src={TeamLogos.champLeague} alt="" />
+        );
+      } else {
+        return (
+          <img
+            className="upComing-match"
+            src={TeamLogos["Premier League"]}
+            alt=""
+          />
+        );
+      }
+    };
     return (
       <div class="formGuide">
-        <img className="ball" src={TeamLogos.fBall} alt="" /> {"  "}
+        {renderImage()} {"  "}
         {this.state.upComing.homeTeam.name} -VS-{" "}
         {this.state.upComing.awayTeam.name}
         {"  "}
-        <img className="ball" src={TeamLogos.fBall} alt="" />
+        {renderImage()}
         <div className="compName">{this.state.compName}</div>
       </div>
     );
