@@ -80,7 +80,7 @@ class footyApp extends React.Component {
       <nav>
         
           <NavLink exact activeClassName="current" to='/'>Home</NavLink><br />
-          <NavLink exact activeClassName="current" to='/test'>Test</NavLink><br />
+          <NavLink exact activeClassName="current" to='/landing-page'>Test</NavLink><br />
           <NavLink exact activeClassName="current" to='/contact'>Contact</NavLink>
         
       </nav>
