@@ -78,7 +78,8 @@ export class PreviousGames extends React.Component {
 
   render() {
     const renderCard = () => {
-        return this.state.lastThree.map(card => <div class="lastFiveCard">
+      let count = 0;
+        return this.state.lastThree.map(card => <div class="lastFiveCard" key={count ++}>
         <div className="headerContainer">
           <header className="lastFiveHeader">
             {card.competition.name}

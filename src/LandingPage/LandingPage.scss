@@ -1,5 +1,6 @@
 .c-LandingPage {
   padding: 0;
+  width: 100%;
 
   font-family: "Impact", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, serif;
 
@@ -8,13 +9,6 @@
     text-decoration: none;
   }
 
-  // .grid-1,
-  // .grid-2,
-  // .grid-3,
-  // .grid-4 {
-  //   grid-template-rows: repeat(6, 1fr);
-  //   grid-template-columns: repeat(6, 1fr);
-  // }
   .grid-1 {
     background-color: red;
     grid-column-start: 1;
@@ -86,7 +80,7 @@
   }
 
   &__overlayImage {
-    position: absolute; 
+    position: fixed; 
     top: 315px;
     left: 745px;
     }

@@ -15,12 +15,12 @@ const App = () => (
 const Main = () => {
   return <>
   <Switch>
-  <Route exact path ='/' component={HomePage}></Route>
+  <Route exact path ='/' component={LandingPage}></Route>
     <Route exact path ='/previous-games' component={PreviousGames}></Route>
     <Route exact path ='/landing-page' component={LandingPage}></Route>
     <Route exact path ='/top-scorer' component={Test}></Route>
     <Route exact path ='/competition-tables' component={Test}></Route>
-    <Route exact path ='/live-game' component={Test}></Route>
+    <Route exact path ='/live-game' component={HomePage}></Route>
     <Route exact path ='/contact' component={''}></Route>
   </Switch></>
 };
