@@ -81,6 +81,7 @@ export class PremierLeagueTable extends React.Component {
         </tr>)
       }
     return (
+      <><div className="title">Premier League</div>
          <table className="leagueTable">
          <tr>
            <th className="customColumnPos">Pos</th>
@@ -100,7 +101,7 @@ export class PremierLeagueTable extends React.Component {
            <th className="customColumnPts">Pts</th>
          </tr>
          {renderRows()}
-       </table>
+       </table></>
           
     );
   }

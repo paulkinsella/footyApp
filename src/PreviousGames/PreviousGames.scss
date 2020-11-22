@@ -21,7 +21,6 @@
 }
 
 .title {
-    margin-left: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 25px;
@@ -163,6 +162,10 @@
       height: auto;
       background-color: #e8e8e8;
       margin-bottom: 20px;
+    }
+
+    .title {
+      text-align: center;
     }
   
     .lastFive-container {

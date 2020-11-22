@@ -60,7 +60,8 @@
 }
 
 .leagueTable {
-  border: solid 1px
+  border: solid 1px;
+  margin-bottom: 20px;
 }
 
 .customRowD {
@@ -108,6 +109,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .leagueTable{
+    margin: auto;
+  }
   .customRow{
     text-align: left;
   }
