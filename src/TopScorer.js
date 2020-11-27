@@ -5,39 +5,15 @@ import TeamLogos from "./TeamLogos";
 
 export class TopScorer extends React.Component {
   state = {
+    topScorer:{ scorer: []},
     loading: true,
     teamFlag1: null,
     teamFlag2: null,
     teamFlag3: null,
     teamFlag4: null,
     teamFlag5: null,
-    compTopScorer: {
-      numberOfGoals: "",
-      player: {},
-      team: {},
-    },
-    compSecondTopScorer: {
-      numberOfGoals: "",
-      player: {},
-      team: {},
-    },
-    compThirdTopScorer: {
-      numberOfGoals: "",
-      player: {},
-      team: {},
-    },
-    compFourthTopScorer: {
-      numberOfGoals: "",
-      player: {},
-      team: {},
-    },
-    compFifthTopScorer: {
-      numberOfGoals: "",
-      player: {},
-      team: {},
-    },
   };
-
+  
   async componentDidMount() {
     const API_KEY = FootyConstants.API_KEY;
     const topScorerUrl = FootyConstants.TOP_SCORER_URL;
@@ -51,13 +27,12 @@ export class TopScorer extends React.Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        this.setState({ compTopScorer: data.scorers[0], loading: false });
-        this.setState({ compSecondTopScorer: data.scorers[1] });
-        this.setState({ compThirdTopScorer: data.scorers[2] });
-        this.setState({ compFourthTopScorer: data.scorers[3] });
-        this.setState({ compFifthTopScorer: data.scorers[4] });
+        this.setState({ topScorer:{scorer: data.scorers.slice(
+          data.scorers.length - 5,
+          data.scorers.length
+        )}})
 
-        if (TeamLogos[data.scorers[0].team.name]) {
+      if (TeamLogos[data.scorers[0].team.name]) {
           this.setState({
             teamFlag1: TeamLogos[data.scorers[0].team.name],
           });
@@ -96,169 +71,60 @@ export class TopScorer extends React.Component {
         } else {
           this.setState({ teamFlag5: TeamLogos["Premier League"] });
         }
+        // console.log("New Top Scorer",this.state.topScorer.scorer)
+        // this.setState({ teamFlag1: TeamLogos["Premier League"] });
       });
+      console.log("Flag 1:", this.state.teamFlag1)
+      console.log("Flag 2:", this.state.teamFlag2)
+      console.log("Flag 3:", this.state.teamFlag3)
+      console.log("Flag 4:", this.state.teamFlag4)
+      console.log("Flag 5:", this.state.teamFlag5)
   }
 
   render() {
+    const getImage = () => {
+      console.log("New Function", this.state.teamName)
+    }
+    const renderCard = () => {
+      {getImage()}
+      return this.state.topScorer.scorer.map(card => <div class="card">
+      <header class="article-header">
+        <div>
+          <div class="category-title">
+            {card.team.name}
+          </div>
+        </div>
+        <h2 class="article-title">
+          {card.player.name}
+        </h2>
+      </header>
+      <div class="author">
+        <div class="profile">
+          <img
+            src={this.state.teamFlag1}
+            className="App-logo2"
+            alt=""
+          />
+        </div>
+        <div class="info">
+          <div class="caption">
+            {card.numberOfGoals}
+          </div>
+        </div>
+      </div>
+      <div class="tags">
+        <div>Premier League</div>
+        <div>Top Scorers</div>
+      </div>
+    </div>)
+    }
     return (
       <>
         <div className="newCardContainer">
         <div className="title">Top 5 Premier League Goal Scorers</div>
           <div class="card-container">
-            <div class="card">
-              <header class="article-header">
-                <div>
-                  <div class="category-title">
-                    {this.state.compFifthTopScorer.team.name}
-                  </div>
-                </div>
-                <h2 class="article-title">
-                  {this.state.compFifthTopScorer.player.name}
-                </h2>
-              </header>
-              <div class="author">
-                <div class="profile">
-                  <img
-                    src={this.state.teamFlag5}
-                    className="App-logo2"
-                    alt=""
-                  />
-                </div>
-                <div class="info">
-                  <div class="caption">
-                    {this.state.compFifthTopScorer.numberOfGoals}
-                  </div>
-                </div>
-              </div>
-              <div class="tags">
-                <div>Premier League</div>
-                <div>Top Scorers</div>
-              </div>
-            </div>
-
-            <div class="card">
-              <header class="article-header">
-                <div>
-                  <div class="category-title">
-                    {this.state.compFourthTopScorer.team.name}
-                  </div>
-                </div>
-                <h2 class="article-title">
-                  {this.state.compFourthTopScorer.player.name}
-                </h2>
-              </header>
-              <div class="author">
-                <div class="profile">
-                  <img
-                    src={this.state.teamFlag4}
-                    className="App-logo2"
-                    alt=""
-                  />
-                </div>
-                <div class="info">
-                  <div class="caption">
-                    {this.state.compFourthTopScorer.numberOfGoals}
-                  </div>
-                </div>
-              </div>
-              <div class="tags">
-                <div>Premier League</div>
-                <div>Top Scorers</div>
-              </div>
-            </div>
-
-            <div class="card">
-              <header class="article-header">
-                <div>
-                  <div class="category-title">
-                    {this.state.compThirdTopScorer.team.name}
-                  </div>
-                </div>
-                <h2 class="article-title">
-                  {this.state.compThirdTopScorer.player.name}
-                </h2>
-              </header>
-              <div class="author">
-                <div class="profile">
-                  <img
-                    src={this.state.teamFlag3}
-                    className="App-logo2"
-                    alt=""
-                  />
-                </div>
-                <div class="info">
-                  <div class="caption">
-                    {this.state.compThirdTopScorer.numberOfGoals}
-                  </div>
-                </div>
-              </div>
-              <div class="tags">
-                <div>Premier League</div>
-                <div>Top Scorers</div>
-              </div>
-            </div>
-
-            <div class="card">
-              <header class="article-header">
-                <div>
-                  <div class="category-title">
-                    {this.state.compSecondTopScorer.team.name}
-                  </div>
-                </div>
-                <h2 class="article-title">
-                  {this.state.compSecondTopScorer.player.name}
-                </h2>
-              </header>
-              <div class="author">
-                <div class="profile">
-                  <img
-                    src={this.state.teamFlag2}
-                    className="App-logo2"
-                    alt=""
-                  />
-                </div>
-                <div class="info">
-                  <div class="caption">
-                    {this.state.compSecondTopScorer.numberOfGoals}
-                  </div>
-                </div>
-              </div>
-              <div class="tags">
-                <div>Premier League</div>
-                <div>Top Scorers</div>
-              </div>
-            </div>
-
-            <div class="card">
-              <header class="article-header">
-                <div>
-                  <div class="category-title">
-                    {this.state.compTopScorer.team.name}
-                  </div>
-                </div>
-                <h2 class="article-title">
-                  {this.state.compTopScorer.player.name}
-                </h2>
-              </header>
-              <div class="author">
-                <div class="profile">
-                  <img
-                    src={this.state.teamFlag1}
-                    className="App-logo2"
-                    alt=""
-                  />
-                </div>
-                <div class="info">
-                  <div class="caption">
-                    {this.state.compTopScorer.numberOfGoals}
-                  </div>
-                </div>
-              </div>
-              <div class="tags">
-                <div>Premier League</div>
-                <div>Top Scorers</div>
-              </div>
-            </div>
+           
+              {renderCard()}
           </div>
         </div>
       </>
