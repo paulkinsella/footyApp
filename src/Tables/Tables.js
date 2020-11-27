@@ -59,8 +59,9 @@ export class Tables extends React.Component {
      </span>
              </div>
              <hr className={`${className}__ruler`}></hr>
-             {this.state.liveGameChamp ? <ChampionsLeagueTable /> :
-          <PremierLeagueTable /> }
+             {this.state.liveGameChamp ?
+              <ChampionsLeagueTable /> :
+              <PremierLeagueTable /> }
         </div>
         </div>
       )
