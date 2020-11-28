@@ -5,7 +5,7 @@ import TeamLogos from "./TeamLogos";
 
 export class TopScorer extends React.Component {
   state = {
-    topScorer:{ scorer: []},
+    topScorer: { scorer: [] },
     loading: true,
     teamFlag1: null,
     teamFlag2: null,
@@ -13,7 +13,7 @@ export class TopScorer extends React.Component {
     teamFlag4: null,
     teamFlag5: null,
   };
-  
+
   async componentDidMount() {
     const API_KEY = FootyConstants.API_KEY;
     const topScorerUrl = FootyConstants.TOP_SCORER_URL;
@@ -27,12 +27,17 @@ export class TopScorer extends React.Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        this.setState({ topScorer:{scorer: data.scorers.slice(
-          data.scorers.length - 5,
-          data.scorers.length
-        )}})
+        console.log("scorer", data);
+        this.setState({
+          topScorer: {
+            scorer: data.scorers.slice(
+              data.scorers.length - 5,
+              data.scorers.length
+            ),
+          },
+        });
 
-      if (TeamLogos[data.scorers[0].team.name]) {
+        if (TeamLogos[data.scorers[0].team.name]) {
           this.setState({
             teamFlag1: TeamLogos[data.scorers[0].team.name],
           });
@@ -74,58 +79,42 @@ export class TopScorer extends React.Component {
         // console.log("New Top Scorer",this.state.topScorer.scorer)
         // this.setState({ teamFlag1: TeamLogos["Premier League"] });
       });
-      console.log("Flag 1:", this.state.teamFlag1)
-      console.log("Flag 2:", this.state.teamFlag2)
-      console.log("Flag 3:", this.state.teamFlag3)
-      console.log("Flag 4:", this.state.teamFlag4)
-      console.log("Flag 5:", this.state.teamFlag5)
+    console.log("Flag 1:", this.state.teamFlag1);
+    console.log("Flag 2:", this.state.teamFlag2);
+    console.log("Flag 3:", this.state.teamFlag3);
+    console.log("Flag 4:", this.state.teamFlag4);
+    console.log("Flag 5:", this.state.teamFlag5);
   }
 
   render() {
-    const getImage = () => {
-      console.log("New Function", this.state.teamName)
-    }
     const renderCard = () => {
-      {getImage()}
-      return this.state.topScorer.scorer.map(card => <div class="card">
-      <header class="article-header">
-        <div>
-          <div class="category-title">
-            {card.team.name}
+      return this.state.topScorer.scorer.map((card) => (
+        <div class="card">
+          <header class="article-header">
+            <div>
+              <div class="category-title">{card.team.name}</div>
+            </div>
+            <h2 class="article-title">{card.player.name}</h2>
+          </header>
+          <div class="author">
+            <div class="profile">
+              <img src={this.state.teamFlag1} className="App-logo2" alt="" />
+            </div>
+            <div class="info">
+              <div class="caption">{card.numberOfGoals}</div>
+            </div>
+          </div>
+          <div class="tags">
+            <div>Premier League</div>
+            <div>Top Scorers</div>
           </div>
         </div>
-        <h2 class="article-title">
-          {card.player.name}
-        </h2>
-      </header>
-      <div class="author">
-        <div class="profile">
-          <img
-            src={this.state.teamFlag1}
-            className="App-logo2"
-            alt=""
-          />
-        </div>
-        <div class="info">
-          <div class="caption">
-            {card.numberOfGoals}
-          </div>
-        </div>
-      </div>
-      <div class="tags">
-        <div>Premier League</div>
-        <div>Top Scorers</div>
-      </div>
-    </div>)
-    }
+      ));
+    };
     return (
       <>
         <div className="newCardContainer">
-        <div className="title">Top 5 Premier League Goal Scorers</div>
-          <div class="card-container">
-           
-              {renderCard()}
-          </div>
+          <div class="card-container">{renderCard()}</div>
         </div>
       </>
     );

@@ -63,7 +63,7 @@ export class ChampLeagueTopScorer extends React.Component {
             teamFlag1: TeamLogos[data.scorers[0].team.name],
           });
         } else {
-          this.setState({ teamFlag1: TeamLogos.champLeague });
+          this.setState({ teamFlag1: TeamLogos.champLeague })
         }
 
         if (TeamLogos[data.scorers[1].team.name]) {
@@ -103,14 +103,11 @@ export class ChampLeagueTopScorer extends React.Component {
   render() {
     return (
       <>
-        
-
-        <div className="newchampCardContainer">
-        <div className="title">Top 5 Champions League Goal Scorers</div>
-          <div class="champCard-container">
+      <div className="newchampCardContainer">
+        <div class="champCard-container">
             <div class="champCard">
               <header class="article-header">
-                <div>
+                <div class="title-container">
                   <div class="category-title">
                     {this.state.compFifthTopScorer.team.name}
                   </div>
