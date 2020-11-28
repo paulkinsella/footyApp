@@ -106,11 +106,10 @@ export class ChampLeagueTopScorer extends React.Component {
         
 
         <div className="newchampCardContainer">
-        <div className="title">Top 5 Champions League Goal Scorers</div>
-          <div class="champCard-container">
+        <div class="champCard-container">
             <div class="champCard">
               <header class="article-header">
-                <div>
+                <div class="title-container">
                   <div class="category-title">
                     {this.state.compFifthTopScorer.team.name}
                   </div>
