@@ -9,7 +9,8 @@ export const FootyConstants = {
      MUFC: `Manchester United FC`,
      CHAMP:` Champions League`,
      CHAMP_LEAGUE_TABLE: `https://api.football-data.org/v2/competitions/CL/standings`,
-     CHAMP_LEAGUE_TOP_SCORER: `https://api.football-data.org/v2/competitions/CL/scorers`
+     CHAMP_LEAGUE_TOP_SCORER: `https://api.football-data.org/v2/competitions/CL/scorers`,
+     TEST_URL: `https://api.football-data.org/v2/competitions/EL`
 }
 
 export default FootyConstants

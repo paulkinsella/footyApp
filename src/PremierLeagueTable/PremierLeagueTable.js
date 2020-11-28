@@ -60,7 +60,6 @@ export class PremierLeagueTable extends React.Component {
             ),
           });
         });
-
   }
 
   render() {
