@@ -31,8 +31,8 @@ export class TopScorer extends React.Component {
         this.setState({
           topScorer: {
             scorer: data.scorers.slice(
-              data.scorers.length - 5,
-              data.scorers.length
+              data.scorers.start,
+              data.scorers.length - 15
             ),
           },
         });
